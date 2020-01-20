@@ -35,13 +35,16 @@
         </legend>
         <ul>
           <li>
-            <label>ИМЯ*:<input class="" type="text" name="name" value="Петр" required /></label>
+            <label for="name">ИМЯ*:</label>
+            <input class="" type="text" name="name" placeholder="Петр" required id="name" />
           </li>
           <li>
-            <label>ФАМИЛИЯ*:<input class="" type="text" name="name" value="Иванов" required /></label>
+            <label for="second-name">ФАМИЛИЯ*:</label>
+            <input class="" type="text" name="second-name" placeholder="Иванов" required id="second-name"/>
           </li>
           <li>
-            <label>ОТЧЕСТВО:<input class="" type="text" name="name" value="Александрович" /></label>
+            <label for="third-name">ОТЧЕСТВО:</label>
+            <input class="" type="text" name="name" placeholder="Александрович" id="third-name"/>
           </li>
         </ul>
       </fieldset>
@@ -50,29 +53,56 @@
           Контактная информация:
         </legend>
         <ul>
-          <li><label>Контактный телефон*:<input type="tel" name="tel" value="Введите телефон" required></label></li>
-          <li><label>Электронная почта*:<input type="email" value="Введите e-mail" required></label></li>
+          <li>
+            <label for="tel">Контактный телефон*:</label>
+            <input type="tel" name="tel" placeholder="Введите телефон" id="tel" required>
+          </li>
+          <li>
+            <label for="email">Электронная почта*:</label>
+            <input type="email" placeholder="Введите e-mail" required>
+          </li>
         </ul>
       </fieldset>
-      <fieldset class="fieldset">
+      <fieldset class="fieldset fieldset--bold">
         <legend class="fieldset__legend">
           ВАше Общее впечатление:
         </legend>
         <ul>
-          <li><label><input type="radio" name="impression" checked>Скорее положительное</label></li>
-          <li><label><input type="radio" name="impression">Скорее отрицательное</label></li>
-          <li><label><input type="radio" name="impression">Затрудняюсь ответить</label></li>
+          <li>
+            <label for="plus">Скорее положительное</label>
+            <input type="radio" id="plus" value="1" name="impression" checked>
+          </li>
+          <li>
+            <label for="minus">Скорее отрицательное</label>
+            <input type="radio" value="2" id="minus" name="impression">
+          </li>
+          <li>
+            <label for="zero">Затрудняюсь ответить</label>
+            <input type="radio" id="zero"  value="3"name="impression">
+          </li>
         </ul>
       </fieldset>
-      <fieldset class="fieldset">
+      <fieldset class="fieldset fieldset--bold">
         <legend class="fieldset__legend">
           посещенные достопримечательности:
         </legend>
         <ul>
-          <li><label><input type="checkbox" name="Мост Дьявола" checked>Мост Дьявола</label></li>
-          <li><label><input type="checkbox" name="Гора-Колокол">Гора-Колокол</label></li>
-          <li><label><input type="checkbox" name="Слайд-парк">Слайд-парк</label></li>
-          <li><label><input type="checkbox" name="Красные скалы">Красные скалы</label></li>
+          <li>
+            <label for="devil-bridge">Мост Дьявола</label>
+            <input id="devil-bridge" type="checkbox" name="Мост Дьявола" checked>
+          </li>
+          <li>
+            <label for="mountain">Гора-Колокол</label>
+            <input id="mountain" type="checkbox" name="Гора-Колокол">
+          </li>
+          <li>
+            <label for="park">Слайд-парк</label>
+            <input id="park" type="checkbox" name="Слайд-парк">
+          </li>
+          <li>
+            <label for="red-rock">Красные скалы</label>
+            <input id="red-rock" type="checkbox" name="Красные скалы">
+          </li>
         </ul>
       </fieldset>
       <fieldset class="fieldset">
@@ -96,6 +126,22 @@
     </div>
     <div class="htmlacademy">Разработано</div>
   </footer>
+  <div class="form-is-full form-is-full--upper">
+    <span class="form-is-full__header">Ваш отзыв отправлен</span>
+    <p>
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+        В ближайшее время мы опубликуем его на сайте.
+    </p>
+    <button>ЗАКРЫТЬ ОКНО</button>
+  </div>
+  <div class="form-isnt-full form-is-full--upper">
+      <span class="form-isnt-full__header">Ваш отзыв отправлен</span>
+      <p>
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+          В ближайшее время мы опубликуем его на сайте.
+      </p>
+      <button>ОК</button>
+    </div>
 </body>
 
 </html>
